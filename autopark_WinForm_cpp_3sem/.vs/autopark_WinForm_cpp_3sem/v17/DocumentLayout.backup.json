@@ -3,16 +3,23 @@
   "WorkspaceRootPath": "D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2A97FA8B-20D1-4137-AF16-098201DD89D4}|autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem.vcxproj|D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2A97FA8B-20D1-4137-AF16-098201DD89D4}|autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem.vcxproj|solutionrelative:autopark_WinForm_cpp_3sem\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2A97FA8B-20D1-4137-AF16-098201DD89D4}|autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem.vcxproj|D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
       "RelativeMoniker": "D:0:0:{2A97FA8B-20D1-4137-AF16-098201DD89D4}|autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem.vcxproj|solutionrelative:autopark_WinForm_cpp_3sem\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2A97FA8B-20D1-4137-AF16-098201DD89D4}|autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem.vcxproj|D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\MyForm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2A97FA8B-20D1-4137-AF16-098201DD89D4}|autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem.vcxproj|solutionrelative:autopark_WinForm_cpp_3sem\\MyForm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A97FA8B-20D1-4137-AF16-098201DD89D4}|autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem.vcxproj|D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2A97FA8B-20D1-4137-AF16-098201DD89D4}|autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem.vcxproj|solutionrelative:autopark_WinForm_cpp_3sem\\MyForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A97FA8B-20D1-4137-AF16-098201DD89D4}|autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem.vcxproj|D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\HTMLPage.htm||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A97FA8B-20D1-4137-AF16-098201DD89D4}|autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem.vcxproj|solutionrelative:autopark_WinForm_cpp_3sem\\HTMLPage.htm||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A97FA8B-20D1-4137-AF16-098201DD89D4}|autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem.vcxproj|D:\\PROGRAM FILES\\VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.41.34120\\INCLUDE\\EXCEPTION||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,42 +29,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "HTMLPage.htm",
+              "DocumentMoniker": "D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\HTMLPage.htm",
+              "RelativeDocumentMoniker": "autopark_WinForm_cpp_3sem\\HTMLPage.htm",
+              "ToolTip": "D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\HTMLPage.htm",
+              "RelativeToolTip": "autopark_WinForm_cpp_3sem\\HTMLPage.htm",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-01-15T15:58:43.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "exception",
+              "DocumentMoniker": "D:\\program files\\visual studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\exception",
+              "RelativeDocumentMoniker": "..\\..\\..\\program files\\visual studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\exception",
+              "ToolTip": "D:\\program files\\visual studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\exception",
+              "RelativeToolTip": "..\\..\\..\\program files\\visual studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\exception",
+              "ViewState": "AgIAAAUBAAAAAAAAAADwvxMBAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-15T15:40:09.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MyForm.h",
               "DocumentMoniker": "D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\MyForm.h",
               "RelativeDocumentMoniker": "autopark_WinForm_cpp_3sem\\MyForm.h",
-              "ToolTip": "D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\MyForm.h",
-              "RelativeToolTip": "autopark_WinForm_cpp_3sem\\MyForm.h",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAIwKAAAAAqAAAAAAAAAA==",
+              "ToolTip": "D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\MyForm.h*",
+              "RelativeToolTip": "autopark_WinForm_cpp_3sem\\MyForm.h*",
+              "ViewState": "AgIAAO8AAAAAAAAAAAAjwP0AAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-10T20:32:17.059Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\MyForm.h",
               "RelativeDocumentMoniker": "autopark_WinForm_cpp_3sem\\MyForm.h",
-              "ToolTip": "D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "autopark_WinForm_cpp_3sem\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "autopark_WinForm_cpp_3sem\\MyForm.h [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-10T20:32:15.578Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MyForm.cpp",
               "DocumentMoniker": "D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\MyForm.cpp",
               "RelativeDocumentMoniker": "autopark_WinForm_cpp_3sem\\MyForm.cpp",
               "ToolTip": "D:\\git_projects\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\autopark_WinForm_cpp_3sem\\MyForm.cpp",
               "RelativeToolTip": "autopark_WinForm_cpp_3sem\\MyForm.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-10T20:11:30.369Z",
               "EditorCaption": ""

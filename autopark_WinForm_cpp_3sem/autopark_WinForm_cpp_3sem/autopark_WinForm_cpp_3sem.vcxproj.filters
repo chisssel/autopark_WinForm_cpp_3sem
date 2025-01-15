@@ -16,9 +16,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+    <None Include="HTMLPage.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLite\sqlite3.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
