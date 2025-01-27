@@ -1,4 +1,5 @@
 #include "MyForm.h"
+#include "admin.h"
 
 
 #include <windows.h>
@@ -14,43 +15,46 @@ using namespace System::Windows::Forms;
 int main(array<String^>^ args) {
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
-    sqlite3* db;
+    /*sqlite3* db;
     if (sqlite3_open("transport.db", &db) != SQLITE_OK) {
         MessageBox::Show("Ошибка открытия базы данных!");
         return 1;
-    }
+    }*/
 	autoparkWinFormcpp3sem::MyForm form;
 	Application::Run(% form);
+    setlocale(LC_ALL, "Russian");
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
 
     
 
 }
 
 // Функция для выполнения SQL-запросов
-void executeSQL(sqlite3* db, const std::string& sql) {
-    char* errMsg = nullptr;
-    if (sqlite3_exec(db, sql.c_str(), nullptr, nullptr, &errMsg) != SQLITE_OK) {
-        MessageBox::Show("Ошибка выполнения SQL-запроса: " + gcnew String(errMsg));
-        sqlite3_free(errMsg);
-    }
-}
+//void executeSQL(sqlite3* db, const std::string& sql) {
+//    char* errMsg = nullptr;
+//    if (sqlite3_exec(db, sql.c_str(), nullptr, nullptr, &errMsg) != SQLITE_OK) {
+//        MessageBox::Show("Ошибка выполнения SQL-запроса: " + gcnew String(errMsg));
+//        sqlite3_free(errMsg);
+//    }
+//}
 
 // Функция для расчёта стоимости перевозки
-double calculateCost(sqlite3* db, double distance, double weight) {
-    std::string sql = "SELECT cost_per_km, cost_per_kg FROM tariffs WHERE id = 1;";
-    sqlite3_stmt* stmt;
-    double costPerKm = 0, costPerKg = 0;
-
-    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) == SQLITE_OK) {
-        if (sqlite3_step(stmt) == SQLITE_ROW) {
-            costPerKm = sqlite3_column_double(stmt, 0);
-            costPerKg = sqlite3_column_double(stmt, 1);
-        }
-        sqlite3_finalize(stmt);
-    }
-
-    return (distance * costPerKm) + (weight * costPerKg);
-}
+//double calculateCost(sqlite3* db, double distance, double weight) {
+//    std::string sql = "SELECT cost_per_km, cost_per_kg FROM tariffs WHERE id = 1;";
+//    sqlite3_stmt* stmt;
+//    double costPerKm = 0, costPerKg = 0;
+//
+//    if (sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr) == SQLITE_OK) {
+//        if (sqlite3_step(stmt) == SQLITE_ROW) {
+//            costPerKm = sqlite3_column_double(stmt, 0);
+//            costPerKg = sqlite3_column_double(stmt, 1);
+//        }
+//        sqlite3_finalize(stmt);
+//    }
+//
+//    return (distance * costPerKm) + (weight * costPerKg);
+//}
 
 // Основная форма приложения
 //public ref class MainForm : public Form {

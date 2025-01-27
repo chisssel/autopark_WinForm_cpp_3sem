@@ -1,4 +1,8 @@
 #pragma once
+#include <sqlite3.h>
+#include "admin.h"
+#include "client.h"
+#include <msclr/marshal_cppstd.h>
 
 namespace autoparkWinFormcpp3sem {
 
@@ -23,6 +27,8 @@ namespace autoparkWinFormcpp3sem {
 			//
 		}
 
+	
+
 	protected:
 		/// <summary>
 		/// Освободить все используемые ресурсы.
@@ -34,21 +40,30 @@ namespace autoparkWinFormcpp3sem {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^ label_change;
+
 	protected:
 
-	private: System::Windows::Forms::Button^ btn_main;
 
-	private: System::Windows::Forms::RadioButton^ radioButton1;
-	private: System::Windows::Forms::CheckBox^ checkBox;
-	private: System::Windows::Forms::TextBox^ textBox;
+
+
+
+
 	private: System::Windows::Forms::Label^ welcome;
 	private: System::Windows::Forms::Label^ headWelcome;
 	private: System::Windows::Forms::Label^ login;
-	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ pass;
+
+
 	private: System::Windows::Forms::TextBox^ textBoxLogin;
 	private: System::Windows::Forms::TextBox^ textBoxPass;
 	private: System::Windows::Forms::Button^ Enter;
+	private: System::Windows::Forms::MenuStrip^ menuStrip1;
+
+
+	private: System::Windows::Forms::Label^ message;
+
+
+
 
 
 	protected:
@@ -68,71 +83,16 @@ namespace autoparkWinFormcpp3sem {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->label_change = (gcnew System::Windows::Forms::Label());
-			this->btn_main = (gcnew System::Windows::Forms::Button());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
-			this->checkBox = (gcnew System::Windows::Forms::CheckBox());
-			this->textBox = (gcnew System::Windows::Forms::TextBox());
 			this->welcome = (gcnew System::Windows::Forms::Label());
 			this->headWelcome = (gcnew System::Windows::Forms::Label());
 			this->login = (gcnew System::Windows::Forms::Label());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->pass = (gcnew System::Windows::Forms::Label());
 			this->textBoxLogin = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxPass = (gcnew System::Windows::Forms::TextBox());
 			this->Enter = (gcnew System::Windows::Forms::Button());
+			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->message = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
-			// 
-			// label_change
-			// 
-			this->label_change->AutoSize = true;
-			this->label_change->Location = System::Drawing::Point(12, 57);
-			this->label_change->Name = L"label_change";
-			this->label_change->Size = System::Drawing::Size(44, 16);
-			this->label_change->TabIndex = 0;
-			this->label_change->Text = L"label1";
-			this->label_change->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
-			// 
-			// btn_main
-			// 
-			this->btn_main->Location = System::Drawing::Point(12, 104);
-			this->btn_main->Name = L"btn_main";
-			this->btn_main->Size = System::Drawing::Size(200, 62);
-			this->btn_main->TabIndex = 1;
-			this->btn_main->Text = L"нажми меня";
-			this->btn_main->UseVisualStyleBackColor = true;
-			this->btn_main->Click += gcnew System::EventHandler(this, &MyForm::btn_main_Click);
-			// 
-			// radioButton1
-			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->radioButton1->Location = System::Drawing::Point(15, 172);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(103, 20);
-			this->radioButton1->TabIndex = 2;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"radioButton1";
-			this->radioButton1->UseVisualStyleBackColor = true;
-			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton1_CheckedChanged);
-			// 
-			// checkBox
-			// 
-			this->checkBox->AutoSize = true;
-			this->checkBox->Location = System::Drawing::Point(15, 198);
-			this->checkBox->Name = L"checkBox";
-			this->checkBox->Size = System::Drawing::Size(95, 20);
-			this->checkBox->TabIndex = 3;
-			this->checkBox->Text = L"checkBox1";
-			this->checkBox->UseVisualStyleBackColor = true;
-			this->checkBox->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox_CheckedChanged);
-			// 
-			// textBox
-			// 
-			this->textBox->Location = System::Drawing::Point(12, 76);
-			this->textBox->Name = L"textBox";
-			this->textBox->Size = System::Drawing::Size(100, 22);
-			this->textBox->TabIndex = 4;
-			this->textBox->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox_TextChanged);
 			// 
 			// welcome
 			// 
@@ -140,7 +100,7 @@ namespace autoparkWinFormcpp3sem {
 			this->welcome->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->welcome->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->welcome->Location = System::Drawing::Point(299, 130);
+			this->welcome->Location = System::Drawing::Point(377, 173);
 			this->welcome->Name = L"welcome";
 			this->welcome->Size = System::Drawing::Size(204, 36);
 			this->welcome->TabIndex = 5;
@@ -152,76 +112,94 @@ namespace autoparkWinFormcpp3sem {
 			this->headWelcome->AutoSize = true;
 			this->headWelcome->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->headWelcome->Location = System::Drawing::Point(36, 15);
+			this->headWelcome->Location = System::Drawing::Point(124, 56);
 			this->headWelcome->Name = L"headWelcome";
 			this->headWelcome->Size = System::Drawing::Size(752, 42);
 			this->headWelcome->TabIndex = 6;
 			this->headWelcome->Text = L"Рассчитайте стоимость Вашей перевозки";
+			this->headWelcome->Click += gcnew System::EventHandler(this, &MyForm::headWelcome_Click);
 			// 
 			// login
 			// 
 			this->login->AutoSize = true;
 			this->login->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->login->Location = System::Drawing::Point(126, 193);
+			this->login->Location = System::Drawing::Point(204, 260);
 			this->login->Name = L"login";
 			this->login->Size = System::Drawing::Size(155, 25);
 			this->login->TabIndex = 7;
 			this->login->Text = L"Введите логин:";
 			// 
-			// label1
+			// pass
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->pass->AutoSize = true;
+			this->pass->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(126, 233);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(167, 25);
-			this->label1->TabIndex = 8;
-			this->label1->Text = L"Введите пароль:";
+			this->pass->Location = System::Drawing::Point(204, 300);
+			this->pass->Name = L"pass";
+			this->pass->Size = System::Drawing::Size(167, 25);
+			this->pass->TabIndex = 8;
+			this->pass->Text = L"Введите пароль:";
 			// 
 			// textBoxLogin
 			// 
-			this->textBoxLogin->Location = System::Drawing::Point(305, 198);
+			this->textBoxLogin->Location = System::Drawing::Point(383, 265);
 			this->textBoxLogin->Name = L"textBoxLogin";
-			this->textBoxLogin->Size = System::Drawing::Size(100, 22);
+			this->textBoxLogin->Size = System::Drawing::Size(198, 26);
 			this->textBoxLogin->TabIndex = 9;
 			// 
 			// textBoxPass
 			// 
-			this->textBoxPass->Location = System::Drawing::Point(305, 237);
+			this->textBoxPass->Location = System::Drawing::Point(383, 304);
 			this->textBoxPass->Name = L"textBoxPass";
-			this->textBoxPass->Size = System::Drawing::Size(100, 22);
+			this->textBoxPass->Size = System::Drawing::Size(198, 26);
 			this->textBoxPass->TabIndex = 10;
 			// 
 			// Enter
 			// 
-			this->Enter->Location = System::Drawing::Point(305, 281);
+			this->Enter->Location = System::Drawing::Point(400, 344);
 			this->Enter->Name = L"Enter";
 			this->Enter->Size = System::Drawing::Size(164, 46);
 			this->Enter->TabIndex = 11;
 			this->Enter->Text = L"Войти";
 			this->Enter->UseVisualStyleBackColor = true;
+			this->Enter->Click += gcnew System::EventHandler(this, &MyForm::Enter_Click);
+			// 
+			// menuStrip1
+			// 
+			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
+			this->menuStrip1->Location = System::Drawing::Point(0, 0);
+			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->Size = System::Drawing::Size(987, 24);
+			this->menuStrip1->TabIndex = 12;
+			this->menuStrip1->Text = L"menuStrip1";
+			// 
+			// message
+			// 
+			this->message->AutoSize = true;
+			this->message->Location = System::Drawing::Point(722, 525);
+			this->message->Name = L"message";
+			this->message->Size = System::Drawing::Size(13, 20);
+			this->message->TabIndex = 13;
+			this->message->Text = L".";
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
-			this->ClientSize = System::Drawing::Size(925, 550);
+			this->ClientSize = System::Drawing::Size(987, 550);
+			this->Controls->Add(this->message);
 			this->Controls->Add(this->Enter);
 			this->Controls->Add(this->textBoxPass);
 			this->Controls->Add(this->textBoxLogin);
-			this->Controls->Add(this->label1);
+			this->Controls->Add(this->pass);
 			this->Controls->Add(this->login);
 			this->Controls->Add(this->headWelcome);
 			this->Controls->Add(this->welcome);
-			this->Controls->Add(this->textBox);
-			this->Controls->Add(this->checkBox);
-			this->Controls->Add(this->radioButton1);
-			this->Controls->Add(this->btn_main);
-			this->Controls->Add(this->label_change);
+			this->Controls->Add(this->menuStrip1);
 			this->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"MyForm";
 			this->Text = L"Рассчет стоимости перевоза груза";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
@@ -236,22 +214,71 @@ namespace autoparkWinFormcpp3sem {
 	}
 	private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void btn_main_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->label_change->Text = "Some new";
-	}
-	private: System::Void checkBox_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (this->checkBox->Checked)
-			this->btn_main->Width = 300;
-		else
-			this->btn_main->Width = 200;
-	}
-	private: System::Void textBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (this->textBox->Text == "Blue")
-			this->btn_main->BackColor = Color::Blue;
-		else if (this->textBox->Text == "Red")
-			this->btn_main->BackColor = Color::Red;
-	}
+	
 private: System::Void label1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void headWelcome_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void калькуляторToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void about_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void Enter_Click(System::Object^ sender, System::EventArgs^ e) {
+	std::string username = msclr::interop::marshal_as<std::string>(textBoxLogin->Text);
+	std::string password = msclr::interop::marshal_as<std::string>(textBoxPass->Text);
+
+	sqlite3* db;
+	int rc = sqlite3_open("users.db", &db);
+	if (rc)
+	{
+		message->Text = "Не удалось открыть базу данных";
+		return;
+	}
+
+	std::string sql = "SELECT Role FROM Users WHERE Username = ? AND Password = ?";
+	sqlite3_stmt* stmt;
+	rc = sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr);
+	if (rc != SQLITE_OK)
+	{
+		message->Text = "Ошибка подготовки запроса";
+		sqlite3_close(db);
+		return;
+	}
+
+	sqlite3_bind_text(stmt, 1, username.c_str(), -1, SQLITE_STATIC);
+	sqlite3_bind_text(stmt, 2, password.c_str(), -1, SQLITE_STATIC);
+
+	rc = sqlite3_step(stmt);
+	if (rc == SQLITE_ROW)
+	{
+		std::string role = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0));
+		if (role == "Admin")
+		{
+			message->Text = "Добро пожаловать, Админ!";
+			message->ForeColor = System::Drawing::Color::Green;
+			// Открыть форму для админа
+			
+			admin^ adminPanel = gcnew admin();
+			adminPanel->ShowDialog();
+		}
+		else if (role == "Client")
+		{
+			message->Text = "Добро пожаловать, Клиент!";
+			message->ForeColor = System::Drawing::Color::Green;
+			// Открыть форму для клиента
+			
+			client^ clientPanel = gcnew client();
+			clientPanel->ShowDialog();
+		}
+	}
+	else
+	{
+		message->Text = "Неверный логин или пароль";
+		message->ForeColor = System::Drawing::Color::Red;
+	}
+
+	sqlite3_finalize(stmt);
+	sqlite3_close(db);
 }
 };
 }
